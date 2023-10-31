@@ -26,9 +26,9 @@ public class vista  extends Application{
 	public void start(Stage primaryStage) throws Exception {
 
 		VBox v1= new VBox();
-		HBox h1= new HBox();
-		HBox h2= new HBox();
-		HBox h3= new HBox();
+		HBox h1= new HBox(10);
+		HBox h2= new HBox(10);
+		HBox h3= new HBox(10);
 		TextField t1 = new TextField();
 		PasswordField pass = new PasswordField();
 		CheckBox c1 = new CheckBox("usar LDAP");
@@ -38,18 +38,24 @@ public class vista  extends Application{
 		t1.setPromptText("Contraseña del usuario");
 		pass.setPromptText("Contraseña");
 		
-		
-		v1.setAlignment(Pos.CENTER);
-		h1.getChildren().addAll(new Label("Usuario: "),t1);
-		h2.getChildren().addAll(new Label("Contraseña: "),pass);
-		h3.getChildren().addAll(b1,b2);
-		
 		h1.setAlignment(Pos.CENTER);
 		h2.setAlignment(Pos.CENTER);
 		h3.setAlignment(Pos.CENTER);
+		h1.setSpacing(5);
+		h2.setSpacing(5);
+		h3.setSpacing(5);
+		
+	
+		h1.getChildren().addAll(new Label("Usuario:       "),t1);
+		h2.getChildren().addAll(new Label("Contraseña: "),pass);
+		h3.getChildren().addAll(b1,b2);
+		
+
 		
 		
 		v1.getChildren().addAll(h1,h2, c1 ,h3);
+		v1.setAlignment(Pos.CENTER);
+		v1.setSpacing(5);
 		
         Scene scene = new Scene(v1, 500, 500);
 
