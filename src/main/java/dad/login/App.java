@@ -1,13 +1,13 @@
 package dad.login;
 
-import dad.mvc.loginController;
+import dad.login.mvc.loginControllerFXML;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
 
-	private loginController control = new loginController();
+	private loginControllerFXML control = new loginControllerFXML();
 
 	@Override
 
